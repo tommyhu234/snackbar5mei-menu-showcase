@@ -1,0 +1,124 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #000000;
+  background-image: url("assets/asfalt-light.png");
+  background-size: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.carousel-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.carousel-item {
+  height: calc(100vh - 64px);
+  width: calc(100vw - 128px);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item.fly-in {
+  animation: flyInLeft 1.5s ease-out forwards;
+}
+
+.carousel-item.fly-out {
+  animation: flyOutRight 1.5s ease-out forwards;
+}
+
+.grid-4 {
+  display: grid;
+  gap: 4rem 6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.showcase-box-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+.showcase-box {
+  height: fit-content;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #FFF;
+  border-radius: 1rem;
+}
+
+.showcase-box-image {
+  display: flex;
+}
+
+.carousel-text {
+  position: absolute;
+  color: #FFC107; /* warm yellow header color */
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+}
+
+.carousel-detail-text-container {
+  flex-wrap: wrap;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.carousel-detail-text {
+  color: #F5F5F5;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+}
+
+.img-loaded-fries {
+  margin-top: 50px;
+  width: 65%;
+}
+
+.img-smashburgers {
+  width: 100%;
+}
+
+@keyframes flyInLeft {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
