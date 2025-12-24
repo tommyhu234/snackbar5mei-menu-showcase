@@ -25,6 +25,9 @@ body {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-item.active {
@@ -119,22 +122,22 @@ body {
 
 @keyframes flyInLeft {
   from {
-    transform: translateX(-150%);
+    transform: translate3d(-150%, 0, 0);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
 
 @keyframes flyOutRight {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
   to {
-    transform: translateX(150%);
+    transform: translate3d(150%, 0, 0);
     opacity: 0;
   }
 }
