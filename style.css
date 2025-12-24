@@ -25,9 +25,6 @@ body {
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  will-change: transform, opacity;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .carousel-item.active {
