@@ -1,6 +1,6 @@
 const items = document.querySelectorAll('.carousel-item');
 let current = 0;
-const intervalTime = 15 * 1000; // seconds per item
+const intervalTime = 5 * 1000; // seconds per item
 
 function showNextItem() {
   const oldItem = items[current];
